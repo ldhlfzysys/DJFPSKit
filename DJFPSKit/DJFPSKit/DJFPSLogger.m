@@ -75,7 +75,7 @@
     [self _shutdownRecoder];
 }
 
-- (void)stopRecrod
+- (void)stopRecord
 {
     [self _shutdownRecoder];
 }

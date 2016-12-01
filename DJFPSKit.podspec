@@ -8,6 +8,6 @@
     s.social_media_url ="http://weibo.com/u/1788868134" 
     s.platform = :ios, "7.0"  
     s.source = { :git => "https://github.com/ldhlfzysys/DJFPSKit.git", :tag => "0.0.1" } 
-    s.source_files  = "DJFPSKit", "DJFPSKit/**/*.{h,m}"
+    s.source_files  = "DJFPSKit/DJFPSKit/*.{h,m}", "DJFPSKit/html/*.*"
     s.requires_arc = true  
 end

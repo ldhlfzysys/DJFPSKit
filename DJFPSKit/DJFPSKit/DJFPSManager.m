@@ -91,9 +91,9 @@
     [[DJFPSManager sharedManager] startRecordType:self];
 }
 
-- (void)fpsViewDidDisAppear:(BOOL)animated
+- (void)fpsViewDidDisappear:(BOOL)animated
 {
-    [self fpsViewDidDisAppear:animated];
+    [self fpsViewDidDisappear:animated];
     if (self.logger) {
         [self.logger stopRecord];
     }
@@ -148,7 +148,7 @@
     if (didAddMethod)
     {
         IMP originalIMP = method_getImplementation(originalMethod);
-        BOOL didAddSwizz = class_addMethod(class, swizzlSEL, originalIMP, method_getTypeEncoding(originalMethod));
+        class_addMethod(class, swizzlSEL, originalIMP, method_getTypeEncoding(originalMethod));
     }
     else
     {
@@ -163,7 +163,7 @@
 - (void)swizzledViewController
 {
     [self swizzledMethod:@selector(viewDidAppear:) swizzled:@selector(fpsViewDidAppear:) Class:NSClassFromString(@"UITableViewController")];
-    [self swizzledMethod:@selector(viewDidDisAppear:) swizzled:@selector(fpsViewDidDisAppear:) Class:NSClassFromString(@"UITableViewController")];
+    [self swizzledMethod:@selector(viewDidDisappear:) swizzled:@selector(fpsViewDidDisappear:) Class:NSClassFromString(@"UITableViewController")];
 }
 
 
