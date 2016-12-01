@@ -75,8 +75,13 @@
         
         NSString *path = [[NSBundle mainBundle] bundlePath];
         NSURL *baseURL = [NSURL fileURLWithPath:path];
-        NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"ShowFPS"
-                                                              ofType:@"html"];
+
+        NSBundle *bundle = [NSBundle bundleForClass:[DJFPSResultsController class]];
+        NSURL *bundleUrl = [bundle URLForResource:@"DJFPSKit" withExtension:@"bundle"];
+        NSBundle *readBundle = [NSBundle bundleWithURL:bundleUrl];
+        NSString * htmlPath = [readBundle pathForResource:@"ShowFPS"
+                                                   ofType:@"html"];
+        
         NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
                                                         encoding:NSUTF8StringEncoding
                                                            error:nil];
