@@ -1,0 +1,92 @@
+
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+            <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+            <script type="text/javascript" src="highcharts.js"></script>
+            <script type="text/javascript" src="exporting.js"></script>
+            <script>
+                var fpsdata;
+                var picCallBack = function(arr) {
+                    fpsdata = arr;
+                    show1();
+                }
+            
+            var chart1;
+            
+            function show1() {
+                
+                chart1 = new Highcharts.Chart({
+                                              chart: {
+                                              renderTo: 'container1'
+                                              },
+                                              rangeSelector: {
+                                              selected: 1
+                                              },
+                                              title: {
+                                              text: 'FPS值',
+                                              x: -20 //center
+                                              },
+                                              subtitle: {
+                                              text: '各版本情况',
+                                              x: -20
+                                              },
+                                              xAxis: {
+                                              title: {
+                                              text: '0.5秒一个点'
+                                              },
+                                              labels: {
+                                              formatter: function() {
+                                              return this.value + '';
+                                              }
+                                              },
+                                              categories: []
+                                              },
+                                              yAxis: {
+                                              title: {
+                                              text: 'fps value'
+                                              },
+                                              plotLines: [{
+                                                          value: 0,
+                                                          width: 1,
+                                                          color: '#808080'
+                                                          }]
+                                              },
+                                              tooltip: {
+                                              shared: false,
+                                              useHTML: true,
+                                              headerFormat: '<small>{point.y}</small><br>',
+                                              pointFormat: '<span style="color: {series.color};font-size: 10px">{series.name}',
+                                              footerFormat: '</table>',
+                                              valueDecimals: 4
+                                              },
+                                              legend: {
+                                              layout: 'vertical',
+                                              align: 'right',
+                                              verticalAlign: 'middle',
+                                              borderWidth: 0
+                                              },
+                                              series: []
+                                              });
+                                              
+                                              chart1.addSeries({
+                                                               
+                                                               name: 'test',
+                                                               
+                                                               data: fpsdata,
+                                                               
+                                                               },
+                                                               true)
+                                                               
+            }
+            
+                </script>
+            
+            
+            </head>
+    
+    <body>
+        <div id="container1" style="min-width:800px;height:400px;"></div>
+    </body>
+</html>
+
