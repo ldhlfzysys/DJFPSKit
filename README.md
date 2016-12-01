@@ -17,3 +17,9 @@ DJFPSKit是用于测app各页面fps值的工具，整个面板使用挂载的方
 1. 引入#import "DJFPSManager.h"
 2. 打开面板 `[DJFPSManager sharedManager].mainSwitch = YES;`
 之后再面板中有开启记录和查看按钮，使用比较简单。可以查看已经记录的页面fps情况。
+
+截图
+===============
+ ![image](https://github.com/ldhlfzysys/DJFPSKit/blob/master/screenshot/1.png)
+ ![image](https://github.com/ldhlfzysys/DJFPSKit/blob/master/screenshot/2.png)
+ ![image](https://github.com/ldhlfzysys/DJFPSKit/blob/master/screenshot/3.png)
