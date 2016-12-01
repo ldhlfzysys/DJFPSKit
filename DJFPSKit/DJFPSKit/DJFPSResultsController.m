@@ -72,9 +72,6 @@
             _webView.transform = CGAffineTransformMakeRotation(M_PI * 0.5);
         } completion:^(BOOL finished) {
         }];
-        
-        NSString *path = [[NSBundle mainBundle] bundlePath];
-        NSURL *baseURL = [NSURL fileURLWithPath:path];
 
         NSBundle *bundle = [NSBundle bundleForClass:[DJFPSResultsController class]];
         NSURL *bundleUrl = [bundle URLForResource:@"DJFPSKit" withExtension:@"bundle"];
@@ -85,7 +82,7 @@
         NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
                                                         encoding:NSUTF8StringEncoding
                                                            error:nil];
-        [self.webView loadHTMLString:htmlCont baseURL:baseURL];
+        [self.webView loadHTMLString:htmlCont baseURL:bundleUrl];
         
         self.closeBtn = [[UIButton alloc]initWithFrame:CGRectMake(kScreenFrame.size.width - 40, 20, 40, 20)];
         self.closeBtn.transform = CGAffineTransformMakeRotation(M_PI * 0.5);
