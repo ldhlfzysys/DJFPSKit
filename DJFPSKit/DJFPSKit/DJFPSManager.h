@@ -21,4 +21,5 @@
 - (void)startRecordType:(id)type;
 
 - (void)showControlPanel;
+- (void)stopRecrod;
 @end

@@ -94,6 +94,11 @@
 - (void)fpsViewDidDisappear:(BOOL)animated
 {
     [self fpsViewDidDisappear:animated];
+    [[DJFPSManager sharedManager] stopRecrod];
+}
+
+- (void)stopRecrod
+{
     if (self.logger) {
         [self.logger stopRecord];
     }
