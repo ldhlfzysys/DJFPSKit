@@ -248,6 +248,7 @@
     seconds.secureTextEntry = NO;
     seconds.placeholder = @"时长(秒)，默认30秒";
     seconds.accessibilityLabel = @"logtime";
+    seconds.keyboardType = UIKeyboardTypeNumberPad;
     [alert show];
 }
 
@@ -281,10 +282,13 @@
 - (void)activeTimer:(NSUInteger)seconds;
 {
     self.needRecording = NO;
-    
-    [self.logger startRecoderWithEstimateTime:seconds RecordOnlyScrolling:YES];
     _currentVC = _tmpCacheVC;
     self.type = _tmpCachetype;
+    if (_tmpCacheVC == nil) {
+        return;
+    }
+    [self.logger startRecoderWithEstimateTime:seconds RecordOnlyScrolling:YES];
+
     [self.logger.userInfo setObject:self.type forKey:@"loggertype"];
     
     if (![classMaps containsObject:[_tmpCacheVC class]]) {
