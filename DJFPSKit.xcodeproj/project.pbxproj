@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DEF63C631DF05607007F3DE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF63C621DF05607007F3DE0 /* main.m */; };
-		DEF63C661DF05607007F3DE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF63C651DF05607007F3DE0 /* AppDelegate.m */; };
 		DEF63C6E1DF05607007F3DE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEF63C6D1DF05607007F3DE0 /* Assets.xcassets */; };
 		DEF63C711DF05607007F3DE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF63C6F1DF05607007F3DE0 /* LaunchScreen.storyboard */; };
 		DEF63C8D1DF0562E007F3DE0 /* DJFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF63C7A1DF0562E007F3DE0 /* DJFileManager.m */; };
@@ -22,14 +21,11 @@
 		DEF63C951DF0562E007F3DE0 /* highcharts.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF63C8A1DF0562E007F3DE0 /* highcharts.js */; };
 		DEF63C961DF0562E007F3DE0 /* jquery-1.8.3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF63C8B1DF0562E007F3DE0 /* jquery-1.8.3.min.js */; };
 		DEF63C971DF0562E007F3DE0 /* ShowFPS.html in Resources */ = {isa = PBXBuildFile; fileRef = DEF63C8C1DF0562E007F3DE0 /* ShowFPS.html */; };
-		DEF63C9A1DF05678007F3DE0 /* ExampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF63C991DF05678007F3DE0 /* ExampleTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DEF63C5E1DF05607007F3DE0 /* DJFPSKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DJFPSKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF63C621DF05607007F3DE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DEF63C641DF05607007F3DE0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		DEF63C651DF05607007F3DE0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DEF63C6D1DF05607007F3DE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEF63C701DF05607007F3DE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEF63C721DF05607007F3DE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,8 +48,6 @@
 		DEF63C8A1DF0562E007F3DE0 /* highcharts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highcharts.js; sourceTree = "<group>"; };
 		DEF63C8B1DF0562E007F3DE0 /* jquery-1.8.3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.8.3.min.js"; sourceTree = "<group>"; };
 		DEF63C8C1DF0562E007F3DE0 /* ShowFPS.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ShowFPS.html; sourceTree = "<group>"; };
-		DEF63C981DF05678007F3DE0 /* ExampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTableViewController.h; sourceTree = "<group>"; };
-		DEF63C991DF05678007F3DE0 /* ExampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +82,6 @@
 			children = (
 				DEF63C781DF0562E007F3DE0 /* DJFPSKit */,
 				DEF63C881DF0562E007F3DE0 /* html */,
-				DEF63C641DF05607007F3DE0 /* AppDelegate.h */,
-				DEF63C651DF05607007F3DE0 /* AppDelegate.m */,
-				DEF63C981DF05678007F3DE0 /* ExampleTableViewController.h */,
-				DEF63C991DF05678007F3DE0 /* ExampleTableViewController.m */,
 				DEF63C6D1DF05607007F3DE0 /* Assets.xcassets */,
 				DEF63C6F1DF05607007F3DE0 /* LaunchScreen.storyboard */,
 				DEF63C721DF05607007F3DE0 /* Info.plist */,
@@ -215,12 +205,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEF63C9A1DF05678007F3DE0 /* ExampleTableViewController.m in Sources */,
 				DEF63C8E1DF0562E007F3DE0 /* DJFPSData.m in Sources */,
 				DEF63C8F1DF0562E007F3DE0 /* DJFPSLogger.m in Sources */,
 				DEF63C901DF0562E007F3DE0 /* DJFPSLogStorage.m in Sources */,
 				DEF63C911DF0562E007F3DE0 /* DJFPSManager.m in Sources */,
-				DEF63C661DF05607007F3DE0 /* AppDelegate.m in Sources */,
 				DEF63C631DF05607007F3DE0 /* main.m in Sources */,
 				DEF63C8D1DF0562E007F3DE0 /* DJFileManager.m in Sources */,
 				DEF63C931DF0562E007F3DE0 /* DJFPSResultsController.m in Sources */,
@@ -373,6 +361,7 @@
 				DEF63C771DF05607007F3DE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
