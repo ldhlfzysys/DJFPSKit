@@ -46,7 +46,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.navigationController pushViewController:[[DJFPSResultsController alloc]init] animated:YES];
+   
 }
 
 /*
